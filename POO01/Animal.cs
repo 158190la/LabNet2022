@@ -6,7 +6,18 @@ using System.Threading.Tasks;
 
 namespace POO01
 {
-    internal class Animal
+    public abstract class Animal
     {
+        public int cantidadPatas { get; set; }
+
+        public Animal (int cantidadPatas)
+        {
+            this.cantidadPatas = cantidadPatas;
+        }
+
+        public abstract string Caminar();
+        
+        public abstract string Descripcion();
+        
     }
 }

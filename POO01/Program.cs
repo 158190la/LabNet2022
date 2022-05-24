@@ -10,6 +10,16 @@ namespace POO01
     {
         static void Main(string[] args)
         {
+            List<Animal> Animales = new List<Animal>
+            {
+                new Persona(2),
+                new Perro(4)
+            };
+            foreach (var item in Animales)
+            {
+                Console.WriteLine(item.Caminar());
+            }
+            Console.ReadLine();
         }
     }
 }
