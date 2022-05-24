@@ -13,7 +13,8 @@ namespace POO01
             List<Animal> Animales = new List<Animal>
             {
                 new Persona(2),
-                new Perro(4)
+                new Perro(4),
+                new Persona(4)
             };
             foreach (var item in Animales)
             {
