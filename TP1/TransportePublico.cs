@@ -8,5 +8,11 @@ namespace TP1
 {
     internal class TransportePublico
     {
+        public int cantidadPasajeros { get; set; }
+    }
+
+    public void Caminar()
+    {
+
     }
 }
