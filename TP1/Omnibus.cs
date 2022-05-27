@@ -6,7 +6,16 @@ using System.Threading.Tasks;
 
 namespace TP1
 {
-    internal class Omnibus
+    internal class Omnibus : TransportePublico
     {
+        public override string Avanzar()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override string Detenerse()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -6,13 +6,17 @@ using System.Threading.Tasks;
 
 namespace TP1
 {
-    internal class TransportePublico
+    public abstract class TransportePublico
     {
         public int cantidadPasajeros { get; set; }
-    }
 
-    public void Caminar()
-    {
+        public abstract string Detenerse();
+        
+        public abstract string Avanzar();
+
+        
+
 
     }
+    
 }
