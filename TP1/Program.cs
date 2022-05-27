@@ -10,6 +10,7 @@ namespace TP1
     {
         static void Main(string[] args)
         {
+
             List<Taxi> Taxis = new List<Taxi>();
             for (int i = 0; i<5; i++)
             {
@@ -22,6 +23,7 @@ namespace TP1
                 Console.WriteLine(taxi.cantidadPasajeros);
             }
             Console.ReadKey();
+
         }
     }
 }
