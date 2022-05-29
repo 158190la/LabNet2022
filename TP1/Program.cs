@@ -68,7 +68,7 @@ namespace TP1
                          new Taxi(pasajerosTaxi[3]),
                          new Taxi(pasajerosTaxi[4]),
 
-                         };
+                        };
 
 
                         int f = 0;
@@ -99,7 +99,7 @@ namespace TP1
                 }
                 Console.WriteLine("Sistema de Carga de Pasajeros");
                 Console.WriteLine("Menu de Opciones");
-                Console.WriteLine("1 - Carga de Datos (Los datos sobreescribiran a los cargados previamente");
+                Console.WriteLine("1 - Carga de Datos (Los datos sobreescribiran a los cargados previamente)");
                 Console.WriteLine("2 - Impresion de datos en pantalla");
                 Console.WriteLine("3 - Salir");
                 Console.WriteLine("Ingrese su opcion y luego presione Enter");
