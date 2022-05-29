@@ -15,7 +15,7 @@ namespace TP1
             Console.WriteLine("1 - Carga de Datos");
             Console.WriteLine("2 - Impresion de datos en pantalla");
             Console.WriteLine("3 - Salir");
-            Console.WriteLine("Ingrese su opcion");
+            Console.WriteLine("Ingrese su opcion y luego presione Enter");
             int opcion = int.Parse(Console.ReadLine());
             int[] pasajerosTaxi = new int[5];
             int[] pasajerosOmnibus = new int[5];
@@ -27,7 +27,6 @@ namespace TP1
 
                         for (int i = 1; i < 6; i++)
                         {
-
                             try
                             {
                                 Console.WriteLine($"Ingrese cantidad de pasajeros en taxi N° {i}");
@@ -46,7 +45,6 @@ namespace TP1
 
                         for (int i = 1; i < 6; i++)
                         {
-
                             try
                             {
                                 Console.WriteLine($"Ingrese cantidad de pasajeros en Omnibus N° {i}");
@@ -56,7 +54,6 @@ namespace TP1
                             {
                                 Console.WriteLine("El valor ingresado no es un numero intente nuevamente");
                                 pasajerosOmnibus[i - 1] = int.Parse(Console.ReadLine());
-
                             }
                         }
                         Console.WriteLine("Hemos finalizado con la carga de pasajeros en la categoria Omnibus");
@@ -64,14 +61,14 @@ namespace TP1
                     case 2:
                         
                         List<Taxi> pasajerosTaxis = new List<Taxi>
-                     {
-                     new Taxi(pasajerosTaxi[0]),
-                     new Taxi(pasajerosTaxi[1]),
-                     new Taxi(pasajerosTaxi[2]),
-                     new Taxi(pasajerosTaxi[3]),
-                     new Taxi(pasajerosTaxi[4]),
+                        {
+                         new Taxi(pasajerosTaxi[0]),
+                         new Taxi(pasajerosTaxi[1]),
+                         new Taxi(pasajerosTaxi[2]),
+                         new Taxi(pasajerosTaxi[3]),
+                         new Taxi(pasajerosTaxi[4]),
 
-                     };
+                         };
 
 
                         int f = 0;
@@ -79,26 +76,23 @@ namespace TP1
                         {
                             f++;
                             Console.WriteLine("El taxi N°{0} lleva {1} pasajero/s", f, var.Pasajeros);
-
                         }
 
                         List<Omnibus> pasajerosOmnibuss = new List<Omnibus>
-                    {
-                     new Omnibus(pasajerosOmnibus[0]),
-                     new Omnibus(pasajerosOmnibus[1]),
-                     new Omnibus(pasajerosOmnibus[2]),
-                     new Omnibus(pasajerosOmnibus[3]),
-                     new Omnibus(pasajerosOmnibus[4]),
+                        {
+                        new Omnibus(pasajerosOmnibus[0]),
+                        new Omnibus(pasajerosOmnibus[1]),
+                        new Omnibus(pasajerosOmnibus[2]),
+                        new Omnibus(pasajerosOmnibus[3]),
+                        new Omnibus(pasajerosOmnibus[4]),
 
-                    };
+                        };
                         Console.WriteLine("------------------------------------------------------------------------------");
                         int d = 0;
                         foreach (Omnibus var in pasajerosOmnibuss)
                         {
-
                             d++;
                             Console.WriteLine("El Omnibus N°{0} lleva {1} pasajero/s", d, var.Pasajeros);
-
                         }
                         break;
                        
@@ -108,7 +102,7 @@ namespace TP1
                 Console.WriteLine("1 - Carga de Datos (Los datos sobreescribiran a los cargados previamente");
                 Console.WriteLine("2 - Impresion de datos en pantalla");
                 Console.WriteLine("3 - Salir");
-                Console.WriteLine("Ingrese su opcion");
+                Console.WriteLine("Ingrese su opcion y luego presione Enter");
                 opcion = int.Parse(Console.ReadLine());
             }
             
