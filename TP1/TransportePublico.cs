@@ -8,7 +8,14 @@ namespace TP1
 {
     public abstract class TransportePublico
     {
-        public int cantidadPasajeros { get; set; }
+        private int pasajeros;
+        public int Pasajeros{ get { return this.pasajeros; } }
+
+
+        public TransportePublico (int pasajeros)
+        {
+            this.pasajeros = pasajeros;
+        }
 
         public abstract string Detenerse();
         

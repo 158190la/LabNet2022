@@ -6,11 +6,15 @@ using System.Threading.Tasks;
 
 namespace TP1
 {
-    internal class Taxi : TransportePublico
+    public class Taxi : TransportePublico
     {
+        public Taxi(int pasajeros) : base(pasajeros)
+        {
+
+        }
         public override string Avanzar()
         {
-            throw new NotImplementedException();
+            return string.Format("En este taxi viajan {0} pasajeros", Pasajeros);
         }
 
         public override string Detenerse()
