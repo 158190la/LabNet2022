@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace TP2
 {
-
+   
     internal class Excepcionpersonalizada : Exception
     {
-        public Excepcionpersonalizada() : base() { }
-        public Excepcionpersonalizada(string message) : base(message) { }
+        public Excepcionpersonalizada() { }
+        
+        public Excepcionpersonalizada(string name) : base(String.Format("hola juan carlo {0}", name)) { }
     }
 }

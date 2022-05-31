@@ -64,12 +64,13 @@ namespace TP2
             try
             {
                 Logic logic = new Logic();
-                Console.WriteLine(logic.Division(10, 0));
+                Console.WriteLine(logic.Division(0,0));
             }
-            catch (Excepcionpersonalizada message)
-            {
-
-                throw message;
+            catch (Excepcionpersonalizada ex)
+            { 
+                throw (ex);
+                
+                
             }
             Console.ReadKey();
 
