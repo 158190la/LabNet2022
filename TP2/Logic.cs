@@ -13,5 +13,7 @@ namespace TP2
         {
             return arriba / abajo;
         }
+        
+
     }
 }
