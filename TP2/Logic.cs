@@ -22,16 +22,9 @@ namespace TP2
             dividendo1 = int.Parse(Console.ReadLine());
             Console.WriteLine("Ingrese el divisor");
             divisor1 = int.Parse(Console.ReadLine());                     
-            return Tuple.Create(divisor1,dividendo1);
-            
+            return Tuple.Create(divisor1,dividendo1);            
         }
-        public static int IngresoDividendo()
-        {
-            int dividendo1 = 0;
-            Console.WriteLine("Ingrese el dividendo");
-            dividendo1 = int.Parse(Console.ReadLine());
-            return dividendo1;
-        }
+        
 
     }
 }

@@ -8,8 +8,6 @@ namespace TP2
 {
     internal class Program
     {
-
-
         static void Main(string[] args)
         {
             Console.WriteLine("Practica Excepciones - Ingrese su opcion y presione enter para continuar");
@@ -24,9 +22,8 @@ namespace TP2
             {
                 switch (opcion)
                 {
-
-                    case 1:
-                        
+                    //ejercicio 1
+                    case 1:                        
                         var divisor1 = Logic.IngresoDivisor();                       
                         try
                         {
@@ -43,10 +40,9 @@ namespace TP2
                         }
 
                         break;
+                    //ejercicio 2
                     case 2:
-
-
-                        var divisor2 = Tuple.Create(0,0);
+                        var divisor2 = Tuple.Create(1,1);
                         try
                         {
                             divisor2 = Logic.IngresoDivisor();
@@ -54,14 +50,11 @@ namespace TP2
                         catch (Exception)
                         {
                             Console.WriteLine("Seguro Ingreso una letra o no ingreso nada");
-
-                        }
-                        
+                        }                       
 
                         try
                         {
                             Console.WriteLine(Div0.Dividir(divisor2.Item1, divisor2.Item2));
-
                         }
                         catch (DivideByZeroException)
                         {
@@ -70,47 +63,43 @@ namespace TP2
                         catch (Exception ex)
                         {
                             Console.WriteLine(ex.ToString());
-
                         }
                         finally
                         {
                             Console.WriteLine("operacion finalizada");
                         }
                         break;
-
-                    case 3: //ejercicio 3
+                    //ejercicio 3
+                    case 3: 
                         {
                             try
                             {                                
-                                Console.WriteLine(Div0.Dividir(0,10));
+                                Console.WriteLine(Div0.Dividir(0,1));
                             }
                             catch (Exception e)
                             {
                                 Console.WriteLine(e.ToString());
                                 Console.WriteLine(e.GetType().ToString());
-                            }
-                            
+                            }                            
                         }
                         break;
-                        //ejercicio 4
-                            case 4:
+                     //ejercicio 4
+                     case 4:
                         {
-
-                            var divisor4 = Logic.IngresoDivisor();
+                            
                             try
-                            {                                
-                                Excepcionpersonalizada.ValidateNewExceptionPersonalizated(divisor4.Item1, divisor4.Item2);
-                                Console.WriteLine(Div0.Dividir(divisor4.Item1, divisor4.Item2));
+                            {
+                                Excepcionpersonalizada.ExcepcionpersonalizadaValidacion(0, 1);
+                                Console.WriteLine(Div0.Dividir(0,1));
                             }
                             catch (Excepcionpersonalizada ex)
                             {
                                 MessageBox.Show(ex.ToString());
-
                             }
                         }
                         break;
                 }
-                Console.WriteLine("------------------------------------");
+                Console.WriteLine("------------------------------------------------------------");
                 Console.WriteLine("Practica - Ingrese su opcion y presione enter para continuar");
                 Console.WriteLine("1-Ejercicio 1");
                 Console.WriteLine("2-Ejercicio 2");
@@ -118,7 +107,7 @@ namespace TP2
                 Console.WriteLine("4-Ejercicio 4");
                 Console.WriteLine("5-Salir");
                 Console.WriteLine("Ingrese su opcion");
-                Console.WriteLine("------------------------------------");
+                Console.WriteLine("------------------------------------------------------------");
                 opcion = int.Parse(Console.ReadLine());
 
             }

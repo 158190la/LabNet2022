@@ -17,7 +17,7 @@ namespace TP2
 
         public Excepcionpersonalizada(string name) { }
 
-        public static void ValidateNewExceptionPersonalizated(int divisor, int dividendo)
+        public static void ExcepcionpersonalizadaValidacion(int divisor, int dividendo)
         {
             if (divisor == 0)
             {
