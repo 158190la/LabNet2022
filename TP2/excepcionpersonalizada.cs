@@ -9,8 +9,9 @@ namespace TP2
    
     internal class Excepcionpersonalizada : Exception
     {
-        public Excepcionpersonalizada() { }
+        public Excepcionpersonalizada() : base(String.Format("hola juan carlo")) {       
+        }
         
-        public Excepcionpersonalizada(string name) : base(String.Format("hola juan carlo {0}", name)) { }
+        public Excepcionpersonalizada(string name)  { }
     }
 }

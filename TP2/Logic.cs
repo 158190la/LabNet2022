@@ -9,9 +9,9 @@ namespace TP2
     internal class Logic
     {
 
-        public int Division(int Arriba, int Abajo)
+        public int Division(int arriba, int abajo)
         {
-            return Arriba / Abajo;
+            return arriba / abajo;
         }
     }
 }

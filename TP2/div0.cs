@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace TP2
 {
-    public class div0
+    public class Div0
     {
         public int Divisor { get; set; }
         public int Dividendo { get; set; }
 
-        public div0(int divisor, int dividendo)
+        public Div0(int divisor, int dividendo)
         {
             this.Divisor = divisor;
             this.Dividendo = dividendo;
