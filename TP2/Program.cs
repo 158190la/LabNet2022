@@ -17,7 +17,7 @@ namespace TP2
             Console.WriteLine("4-Ejercicio 4");
             Console.WriteLine("5-Salir");
             Console.WriteLine("Ingrese su opcion");
-            int opcion = int.Parse(Console.ReadLine());
+            int opcion = int.Parse(Console.ReadLine());           
             while (opcion != 5)
             {
                 switch (opcion)

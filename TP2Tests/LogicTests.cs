@@ -16,7 +16,9 @@ namespace TP2.Tests
         {
             int divisor1 = 1;
             int dividendo1 = 1;
-                        
+            
+           
+
             Assert.IsTrue(divisor1 == dividendo1);
 
 
