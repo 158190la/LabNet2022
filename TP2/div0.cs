@@ -17,9 +17,11 @@ namespace TP2
             this.Dividendo = dividendo;
         }
 
-        public int Dividir()
+        public static int Dividir(int divisor,int dividendo)
         {
-            return Dividendo / Divisor;
+            int divisor3 = divisor;
+            int dividendo3 = dividendo;
+            return dividendo3 / divisor3;
         }
 
     }

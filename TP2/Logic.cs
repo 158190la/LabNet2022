@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TP2
 {
-    internal class Logic
+    public class Logic
     {
 
         public int Division(int arriba, int abajo)
@@ -14,6 +14,24 @@ namespace TP2
             return arriba / abajo;
         }
         
+        public static Tuple<int,int> IngresoDivisor()
+        {
+            int divisor1 = 0;
+            int dividendo1 = 0;
+            Console.WriteLine("Ingrese el dividendo");
+            dividendo1 = int.Parse(Console.ReadLine());
+            Console.WriteLine("Ingrese el divisor");
+            divisor1 = int.Parse(Console.ReadLine());                     
+            return Tuple.Create(divisor1,dividendo1);
+            
+        }
+        public static int IngresoDividendo()
+        {
+            int dividendo1 = 0;
+            Console.WriteLine("Ingrese el dividendo");
+            dividendo1 = int.Parse(Console.ReadLine());
+            return dividendo1;
+        }
 
     }
 }

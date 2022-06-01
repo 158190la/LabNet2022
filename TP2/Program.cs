@@ -12,12 +12,12 @@ namespace TP2
 
         static void Main(string[] args)
         {
-            Console.WriteLine("Practica Excepciones");
-            Console.WriteLine("Ejercicio 1");
-            Console.WriteLine("Ejercicio 2");
-            Console.WriteLine("Ejercicio 3");
-            Console.WriteLine("Ejercicio 4");
-            Console.WriteLine("Salir");
+            Console.WriteLine("Practica Excepciones - Ingrese su opcion y presione enter para continuar");
+            Console.WriteLine("1-Ejercicio 1");
+            Console.WriteLine("2-Ejercicio 2");
+            Console.WriteLine("3-Ejercicio 3");
+            Console.WriteLine("4-Ejercicio 4");
+            Console.WriteLine("5-Salir");
             Console.WriteLine("Ingrese su opcion");
             int opcion = int.Parse(Console.ReadLine());
             while (opcion != 5)
@@ -26,19 +26,11 @@ namespace TP2
                 {
 
                     case 1:
-                        int divisor1 = 0;
-                        int dividendo1 = 0;
                         
-                            Console.WriteLine("Ingrese el divisor");
-                            divisor1 = int.Parse(Console.ReadLine());
-                            Console.WriteLine("Ingrese el dividendo");
-                            dividendo1 = int.Parse(Console.ReadLine());
-                        
-                        Div0 resultado1 = new Div0(divisor1, dividendo1);
-
+                        var divisor1 = Logic.IngresoDivisor();                       
                         try
                         {
-                            Console.WriteLine(resultado1.Dividir());
+                            Console.WriteLine(Div0.Dividir(divisor1.Item1,divisor1.Item2));
                         }
                        
                         catch (Exception ex)
@@ -53,25 +45,22 @@ namespace TP2
                         break;
                     case 2:
 
-                        int divisor = 0;
-                        int dividendo = 0;
+
+                        var divisor2 = Tuple.Create(0,0);
                         try
                         {
-                            Console.WriteLine("Ingrese el divisor");
-                            divisor = int.Parse(Console.ReadLine());
-                            Console.WriteLine("Ingrese el dividendo");
-                            dividendo = int.Parse(Console.ReadLine());
+                            divisor2 = Logic.IngresoDivisor();
                         }
                         catch (Exception)
                         {
                             Console.WriteLine("Seguro Ingreso una letra o no ingreso nada");
 
                         }
-                        Div0 resultado = new Div0(divisor, dividendo);
+                        
 
                         try
                         {
-                            Console.WriteLine(resultado.Dividir());
+                            Console.WriteLine(Div0.Dividir(divisor2.Item1, divisor2.Item2));
 
                         }
                         catch (DivideByZeroException)
@@ -92,49 +81,42 @@ namespace TP2
                     case 3: //ejercicio 3
                         {
                             try
-                            {
-                                Logic logic = new Logic();
-                                Console.WriteLine(logic.Division(10, 0));
+                            {                                
+                                Console.WriteLine(Div0.Dividir(0,10));
                             }
                             catch (Exception e)
                             {
-
                                 Console.WriteLine(e.ToString());
                                 Console.WriteLine(e.GetType().ToString());
                             }
                             
                         }
                         break;
-                    // ejercicio 4
-                    case 4:
+                        //ejercicio 4
+                            case 4:
                         {
-                            
 
+                            var divisor4 = Logic.IngresoDivisor();
                             try
-                            {
-                                Console.WriteLine("Ingrese el divisor");
-                                divisor = int.Parse(Console.ReadLine());
-                                Console.WriteLine("Ingrese el dividendo");
-                                dividendo = int.Parse(Console.ReadLine());
-                                Logic logic = new Logic();
-                                logic.Division(divisor, dividendo);
-                                Excepcionpersonalizada.ValidateNewExceptionPersonalizated(divisor,dividendo);
+                            {                                
+                                Excepcionpersonalizada.ValidateNewExceptionPersonalizated(divisor4.Item1, divisor4.Item2);
+                                Console.WriteLine(Div0.Dividir(divisor4.Item1, divisor4.Item2));
                             }
                             catch (Excepcionpersonalizada ex)
                             {
                                 MessageBox.Show(ex.ToString());
-                                                      
+
                             }
                         }
                         break;
                 }
                 Console.WriteLine("------------------------------------");
-                Console.WriteLine("Practica Excepciones");
-                Console.WriteLine("Ejercicio 1");
-                Console.WriteLine("Ejercicio 2");
-                Console.WriteLine("Ejercicio 3");
-                Console.WriteLine("Ejercicio 4");
-                Console.WriteLine("Salir");
+                Console.WriteLine("Practica - Ingrese su opcion y presione enter para continuar");
+                Console.WriteLine("1-Ejercicio 1");
+                Console.WriteLine("2-Ejercicio 2");
+                Console.WriteLine("3-Ejercicio 3");
+                Console.WriteLine("4-Ejercicio 4");
+                Console.WriteLine("5-Salir");
                 Console.WriteLine("Ingrese su opcion");
                 Console.WriteLine("------------------------------------");
                 opcion = int.Parse(Console.ReadLine());
