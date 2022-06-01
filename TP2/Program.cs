@@ -24,7 +24,7 @@ namespace TP2
                 {
                     //ejercicio 1
                     case 1:                        
-                        var divisor1 = Logic.IngresoDivisor();                       
+                        var divisor1 = Lecturaescritura.IngresoDivisor();                       
                         try
                         {
                             Console.WriteLine(Div0.Dividir(divisor1.Item1,divisor1.Item2));
@@ -45,7 +45,7 @@ namespace TP2
                         var divisor2 = Tuple.Create(1,1);
                         try
                         {
-                            divisor2 = Logic.IngresoDivisor();
+                            divisor2 = Lecturaescritura.IngresoDivisor();
                         }
                         catch (Exception)
                         {
