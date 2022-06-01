@@ -16,6 +16,7 @@ namespace TP2
         {
             int divisor3 = divisor;
             int dividendo3 = dividendo;
+            int resultado = dividendo3 / divisor3;
             return dividendo3 / divisor3;
         }
 
