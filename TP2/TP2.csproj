@@ -47,6 +47,7 @@
   <ItemGroup>
     <Compile Include="div0.cs" />
     <Compile Include="excepcionpersonalizada.cs" />
+    <Compile Include="Lecturaescritura.cs" />
     <Compile Include="Logic.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
