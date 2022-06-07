@@ -8,7 +8,7 @@ using TP3.EF.Logic;
 
 namespace TP3.EF.UI
 {
-    internal class RR
+    internal class ReadAndWrite
     {
         public static void AddShippers()
         {
@@ -52,27 +52,30 @@ namespace TP3.EF.UI
         }
         public static void Menu()
         {
+            Console.WriteLine("-----------------------------------------------");
             Console.WriteLine("Bienvenido al gestor de base de datos Nortwhind");
             Console.WriteLine("Opciones");
-            Console.WriteLine("Seleccione en que tabla quiere trabajar");
             Console.WriteLine("1 - Agregar Registro");
             Console.WriteLine("2 - Modificar Registro");
             Console.WriteLine("3 - Eliminar Registro");
             Console.WriteLine("4 - Mostrar Tabla");
             Console.WriteLine("5 - Salir");
+            Console.WriteLine("-----------------------------------------------");
+
         }
         public static void Menu2()
         {
-
+            Console.WriteLine("-----------------------------------------------");
             Console.WriteLine("Opciones");
-            Console.WriteLine("Seleccione en que tabla quiere trabajar");
             Console.WriteLine("1 - Agregar Registro");
             Console.WriteLine("2 - Modificar Registro");
             Console.WriteLine("3 - Eliminar Registro");
             Console.WriteLine("4 - Mostrar Tabla");
             Console.WriteLine("5 - Salir");
+            Console.WriteLine("-----------------------------------------------");
+
         }
 
-        
+
     }
 }

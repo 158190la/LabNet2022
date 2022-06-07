@@ -13,7 +13,7 @@ namespace TP3.EF.UI
         static void Main(string[] args)
         {
             int opcion = 0;
-            RR.Menu();
+            ReadAndWrite.Menu();
             try
             {
                opcion = int.Parse(Console.ReadLine());
@@ -27,48 +27,45 @@ namespace TP3.EF.UI
             {
                 switch (opcion)
                 {
-                    case 1: //add new shipper
+                    case 1: 
                         try
                         {
-                            RR.AddShippers();
+                            ReadAndWrite.AddShippers();
                         }
                         catch (Exception)
                         {
                             Console.WriteLine("Alguno de los datos ingresados no corresponde con lo solicitado");
                         }
-
                         break;
-                    case 2: //Update shipper
+
+                    case 2: 
                         try
                         {
-                            RR.UpdateShippers();
+                            ReadAndWrite.UpdateShippers();
                         }
                         catch
                         {
-                            Console.WriteLine("Dato Mal ingresado o ID inexistente Intente nuevamente por favor");
+                            Console.WriteLine("Dato mal ingresado o ID inexistente Intente nuevamente por favor");
                         }
-                        break; //Delete shipper
+                        break; 
+
                     case 3:
                         try
                         {
-                            RR.DeleteShippers();
+                            ReadAndWrite.DeleteShippers();
                         }
                         catch
                         {
                             Console.WriteLine("El ID ingresado no existe intente con otro por favor");
                         }
-
                         break;
 
-                    case 4: // Mostrar Tabla
-
+                     case 4: 
                         ShippersLogic.Show();
-
                         break;
-
 
                 }
-                RR.Menu2();
+                ReadAndWrite.Menu2();
                 try
                 {
                    opcion = int.Parse(Console.ReadLine());
@@ -80,21 +77,7 @@ namespace TP3.EF.UI
 
             }
 
-
-
-
-
-
-
-
-
-
         }
-
         
-
-
-
-
     }
 }
