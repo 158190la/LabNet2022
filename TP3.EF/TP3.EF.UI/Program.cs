@@ -8,71 +8,77 @@ using TP3.EF.Logic;
 
 namespace TP3.EF.UI
 {
-    internal class Program : ShippersLogic
+    internal class Program
     {
         static void Main(string[] args)
         {
+            int opcion = 0;
+            RR.Menu();
+            try
+            {
+               opcion = int.Parse(Console.ReadLine());
+            }
+            catch
+            {
+                Console.WriteLine("Opcion Invalida vuelva a Intentar");
+            }
 
-            Menu();
-            int opcion = int.Parse(Console.ReadLine());
-            
             while (opcion != 5)
             {
                 switch (opcion)
                 {
-                    case 1:
-
-                        ShippersLogic shippersLogicadd = new ShippersLogic();
-                        Console.WriteLine("Ingrese el Nombre del nuevo Shipper");
-                        string newShipperName = Console.ReadLine();
-                        Console.WriteLine("Ingrese el Numero del nuevo Shipper");
-                        string newShipperTelephone = Console.ReadLine();
-                        shippersLogicadd.Add(new Shippers
-                        {                            
-                            CompanyName = newShipperName,
-                            Phone = newShipperTelephone
-                        });
-                        break;
-                    case 2:
-
-                        ShippersLogic shippersLogicUpdate = new ShippersLogic();
-                        Console.WriteLine("Ingrese el ID del shipper a Modificar");
-                        int updateID = int.Parse(Console.ReadLine());
-                        Console.WriteLine("Ingrese el Nombre del shipper a Modificar");
-                        string updateShipperName = Console.ReadLine();
-                        Console.WriteLine("Ingrese el Telefono del shipper a Modificar");
-                        string updateShipperPhone = Console.ReadLine();
-                        shippersLogicUpdate.Update(new Shippers
+                    case 1: //add new shipper
+                        try
                         {
-                            ShipperID = updateID,
-                            CompanyName = updateShipperName,
-                            Phone = updateShipperPhone
-
-                        });
-
-
+                            RR.AddShippers();
+                        }
+                        catch (Exception)
+                        {
+                            Console.WriteLine("Alguno de los datos ingresados no corresponde con lo solicitado");
+                        }
 
                         break;
+                    case 2: //Update shipper
+                        try
+                        {
+                            RR.UpdateShippers();
+                        }
+                        catch
+                        {
+                            Console.WriteLine("Dato Mal ingresado o ID inexistente Intente nuevamente por favor");
+                        }
+                        break; //Delete shipper
                     case 3:
-                        ShippersLogic shippersLogicdelete = new ShippersLogic();
-                        Console.WriteLine("Ingrese el ID del Shipper a Eliminar");
-                        int idAEliminar = int.Parse(Console.ReadLine());
-                        shippersLogicdelete.Delete(idAEliminar);
-                        
+                        try
+                        {
+                            RR.DeleteShippers();
+                        }
+                        catch
+                        {
+                            Console.WriteLine("El ID ingresado no existe intente con otro por favor");
+                        }
+
                         break;
 
-                    case 4:
-                        
-                        Show();                                   
-                        
+                    case 4: // Mostrar Tabla
+
+                        ShippersLogic.Show();
+
                         break;
 
-                       
+
                 }
-                Menu2();
-                opcion = int.Parse(Console.ReadLine());
+                RR.Menu2();
+                try
+                {
+                   opcion = int.Parse(Console.ReadLine());
+                }
+                catch
+                {
+                    Console.WriteLine("Opcion Invalida vuelva a Intentar");
+                }
+
             }
-            
 
 
 
@@ -80,8 +86,15 @@ namespace TP3.EF.UI
 
 
 
-           
-            
+
+
+
         }
+
+        
+
+
+
+
     }
 }

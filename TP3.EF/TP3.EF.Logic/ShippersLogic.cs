@@ -50,27 +50,6 @@ namespace TP3.EF.Logic
             }
            
         }
-        public static void Menu()
-        {
-            Console.WriteLine("Bienvenido al gestor de base de datos Nortwhind");
-            Console.WriteLine("Opciones");
-            Console.WriteLine("Seleccione en que tabla quiere trabajar");
-            Console.WriteLine("1 - Agregar Registro");
-            Console.WriteLine("2 - Modificar Registro");
-            Console.WriteLine("3 - Eliminar Registro");
-            Console.WriteLine("4 - Mostrar Tabla");
-            Console.WriteLine("5 - Salir");
-        }
-        public static void Menu2()
-        {
-            
-            Console.WriteLine("Opciones");
-            Console.WriteLine("Seleccione en que tabla quiere trabajar");
-            Console.WriteLine("1 - Agregar Registro");
-            Console.WriteLine("2 - Modificar Registro");
-            Console.WriteLine("3 - Eliminar Registro");
-            Console.WriteLine("4 - Mostrar Tabla");
-            Console.WriteLine("5 - Salir");
-        }
+        
     }
 }
