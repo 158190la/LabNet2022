@@ -40,7 +40,17 @@ namespace TP3.EF.Logic
 
             context.SaveChanges();
         }
-        
-       
+        public static void Show()
+        {
+            CategoriesLogic categoriesLogic = new CategoriesLogic();
+            Console.WriteLine("ID - Name - Descripcion");
+            foreach (Categories categories in categoriesLogic.GetAll())
+            {
+                Console.WriteLine($"{categories.CategoryID} -{categories.CategoryName} - {categories.Description}");
+            }
+
+        }
+
+
     }
 }

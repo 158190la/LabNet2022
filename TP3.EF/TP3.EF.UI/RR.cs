@@ -55,11 +55,13 @@ namespace TP3.EF.UI
             Console.WriteLine("-----------------------------------------------");
             Console.WriteLine("Bienvenido al gestor de base de datos Nortwhind");
             Console.WriteLine("Opciones");
-            Console.WriteLine("1 - Agregar Registro");
-            Console.WriteLine("2 - Modificar Registro");
-            Console.WriteLine("3 - Eliminar Registro");
+            Console.WriteLine("1 - Agregar Registro a Shippers");
+            Console.WriteLine("2 - Modificar Registro de Shippers");
+            Console.WriteLine("3 - Eliminar Registro de Shippers");
             Console.WriteLine("4 - Mostrar Tabla");
-            Console.WriteLine("5 - Salir");
+            Console.WriteLine("5 - Consulta Categories");
+            Console.WriteLine("6 - Salir");
+            Console.WriteLine("Ingrese su Opcion");
             Console.WriteLine("-----------------------------------------------");
 
         }
@@ -67,11 +69,13 @@ namespace TP3.EF.UI
         {
             Console.WriteLine("-----------------------------------------------");
             Console.WriteLine("Opciones");
-            Console.WriteLine("1 - Agregar Registro");
-            Console.WriteLine("2 - Modificar Registro");
-            Console.WriteLine("3 - Eliminar Registro");
+            Console.WriteLine("1 - Agregar Registro a Shippers");
+            Console.WriteLine("2 - Modificar Registro de Shippers");
+            Console.WriteLine("3 - Eliminar Registro de Shippers");
             Console.WriteLine("4 - Mostrar Tabla");
-            Console.WriteLine("5 - Salir");
+            Console.WriteLine("5 - Consulta Categories");
+            Console.WriteLine("6 - Salir");
+            Console.WriteLine("Ingrese su Opcion");
             Console.WriteLine("-----------------------------------------------");
 
         }

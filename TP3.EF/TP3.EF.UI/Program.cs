@@ -23,7 +23,7 @@ namespace TP3.EF.UI
                 Console.WriteLine("Opcion Invalida vuelva a Intentar");
             }
 
-            while (opcion != 5)
+            while (opcion != 6)
             {
                 switch (opcion)
                 {
@@ -62,6 +62,9 @@ namespace TP3.EF.UI
 
                      case 4: 
                         ShippersLogic.Show();
+                        break;
+                    case 5:
+                            CategoriesLogic.Show();
                         break;
 
                 }
