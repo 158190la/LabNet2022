@@ -58,8 +58,8 @@ namespace TP3.EF.UI
             Console.WriteLine("1 - Agregar Registro a Shippers");
             Console.WriteLine("2 - Modificar Registro de Shippers");
             Console.WriteLine("3 - Eliminar Registro de Shippers");
-            Console.WriteLine("4 - Mostrar Tabla");
-            Console.WriteLine("5 - Consulta Categories");
+            Console.WriteLine("4 - Mostrar Tabla Shippers");
+            Console.WriteLine("5 - Consigna b - Mostrar tabla Categories");
             Console.WriteLine("6 - Salir");
             Console.WriteLine("Ingrese su Opcion");
             Console.WriteLine("-----------------------------------------------");
@@ -72,8 +72,8 @@ namespace TP3.EF.UI
             Console.WriteLine("1 - Agregar Registro a Shippers");
             Console.WriteLine("2 - Modificar Registro de Shippers");
             Console.WriteLine("3 - Eliminar Registro de Shippers");
-            Console.WriteLine("4 - Mostrar Tabla");
-            Console.WriteLine("5 - Consulta Categories");
+            Console.WriteLine("4 - Mostrar Tabla Shippers");
+            Console.WriteLine("5 - Consigna b - Mostrar tabla Categories");
             Console.WriteLine("6 - Salir");
             Console.WriteLine("Ingrese su Opcion");
             Console.WriteLine("-----------------------------------------------");
