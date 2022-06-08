@@ -66,7 +66,8 @@ namespace TP3.EF.UI
                      case 5:
                             CategoriesLogic.Show();
                         break;
-                     default: Console.WriteLine("Opcion no disponible, intente ingresar alguna de las mencionadas anteriormente");
+                    default:
+                        Console.WriteLine("Opcion no disponible, intente ingresar alguna de las mencionadas anteriormente");
                         break;
 
                 }
