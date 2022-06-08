@@ -20,7 +20,7 @@ namespace TP3.EF.UI
             }
             catch
             {
-                Console.WriteLine("Opcion Invalida vuelva a Intentar");
+               
             }
 
             while (opcion != 6)
@@ -78,7 +78,7 @@ namespace TP3.EF.UI
                 }
                 catch
                 {
-                    Console.WriteLine("Opcion Invalida vuelva a Intentar");
+                    
                 }
 
             }
