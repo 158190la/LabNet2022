@@ -63,8 +63,10 @@ namespace TP3.EF.UI
                      case 4: 
                         ShippersLogic.Show();
                         break;
-                    case 5:
+                     case 5:
                             CategoriesLogic.Show();
+                        break;
+                     default: Console.WriteLine("Opcion no disponible, intente ingresar alguna de las mencionadas anteriormente");
                         break;
 
                 }
