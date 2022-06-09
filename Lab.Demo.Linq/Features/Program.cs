@@ -20,19 +20,39 @@ namespace Features
                 new Movie { Title = "Deadpool",          Rating = 8.9f, Year = 2018 }
             };
 
-            //Queremos Filtrar las Peliculas anteriores al 2000
-            var query = movies.Where(m => m.Year < 2000);
+            //var query = movies.Where(m => m.Year < 2000).ToList(); //ejecucion inmediata
+
+            var query = movies.Where(m => m.Year < 2000); //ejecucion diferida
 
             var query2 = movies.OrderBy(m => m.Year);
-
             foreach (var item in query2)
             {
                 Console.WriteLine(item.Title);
             }
 
-            var query3 = movies.ToList().Where(m => m.Year < 2000);
+            //var query2 = movies.OrderBy(m => m.Year).ThenByDescending(m => m.Rating).ThenBy(m => m.Title);
 
-            var query4 = movies.Where(m => m.Year < 2000).ToList();
+            //var movie = movies.Any(m => m.Title.Contains("V"));
+
+            //Console.WriteLine(query.Count());
+            //Console.WriteLine(movie);
+            foreach (var item in query)
+            {
+                Console.WriteLine(item.Title);
+            }
+            //Queremos Filtrar las Peliculas anteriores al 2000
+            //var query = movies.Where(m => m.Year < 2000);
+
+            //var query2 = movies.OrderBy(m => m.Year);
+
+            //foreach (var item in query2)
+            //{
+            //    Console.WriteLine(item.Title);
+            //}
+
+            //var query3 = movies.ToList().Where(m => m.Year < 2000);
+
+            //var query4 = movies.Where(m => m.Year < 2000).ToList();
 
 
 
@@ -55,6 +75,13 @@ namespace Features
             //printScreen(add(square(2), 3));
 
             #endregion
+
+            //Func<int, int> square = x => x * x;
+            //Func<int, int, int> add = (x,y) => x + y;
+
+            //Action<int> printScreen = x => Console.WriteLine(x);
+
+            //printScreen(add(square(2),3));
 
             Console.ReadLine();
         }
