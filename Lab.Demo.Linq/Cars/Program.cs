@@ -112,6 +112,7 @@ namespace Cars
             //{
             //    Console.WriteLine($"{item.Name} : {item.Headquarters}");
             //}
+            Console.ReadLine();
         }
 
         private static void InsertData()
@@ -208,6 +209,7 @@ namespace Cars
                        });
             return query.ToList();
         }
+        
     }
 
     public class CarStatistics
@@ -240,6 +242,7 @@ namespace Cars
         public double Average { get; set; }
 
     }
+    
 
     public static class CarExtensions
     {

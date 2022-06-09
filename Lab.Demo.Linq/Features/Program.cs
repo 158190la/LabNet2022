@@ -22,13 +22,14 @@ namespace Features
 
             //var query = movies.Where(m => m.Year < 2000).ToList(); //ejecucion inmediata
 
-            var query = movies.Where(m => m.Year < 2000); //ejecucion diferida
+           // var query = movies.Where(m => m.Year < 2000); //ejecucion diferida
 
-            var query2 = movies.OrderBy(m => m.Year);
-            foreach (var item in query2)
-            {
-                Console.WriteLine(item.Title);
-            }
+            //var query2 = movies.OrderBy(m => m.Year);
+            
+            //foreach (var item in query)
+            //{
+            //    Console.WriteLine(item.Title);
+            //}
 
             //var query2 = movies.OrderBy(m => m.Year).ThenByDescending(m => m.Rating).ThenBy(m => m.Title);
 
@@ -36,10 +37,10 @@ namespace Features
 
             //Console.WriteLine(query.Count());
             //Console.WriteLine(movie);
-            foreach (var item in query)
-            {
-                Console.WriteLine(item.Title);
-            }
+            //foreach (var item in query)
+            //{
+            //    Console.WriteLine(item.Title);
+            //}
             //Queremos Filtrar las Peliculas anteriores al 2000
             //var query = movies.Where(m => m.Year < 2000);
 
