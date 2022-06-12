@@ -30,9 +30,9 @@ namespace tp5.Logic
         public static List<Customers> CustomerRegion()
         {
             var _context = new NorthwindContext();
-            var query2 = from Customers in _context.Customers
+            var query2 = (from Customers in _context.Customers
                          where Customers.Region == "WA"
-                         select Customers;
+                         select Customers).Take(3)                         ;
 
             var query3 = _context.Customers.Where(a => a.Region == "WA");
             return query3.ToList();
@@ -69,6 +69,17 @@ namespace tp5.Logic
 
             return query3.ToList();
         }
+        public static List<Customers> CustomerRegionTop3()
+        {
+            var _context = new NorthwindContext();
+            var query2 = (from Customers in _context.Customers
+                          where Customers.Region == "WA"
+                          select Customers).Take(3);
+
+            
+            return query2.ToList();
+        }
+
 
     }
 

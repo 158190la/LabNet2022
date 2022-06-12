@@ -29,12 +29,62 @@ namespace tp5.Logic
         {
             var _context = new NorthwindContext();
 
-            var query = from Products in _context.Products 
+            var query = from Products in _context.Products
                         where Products.UnitsInStock > 0 && Products.UnitPrice > 3
                         select Products;
 
             return query.ToList();
         }
+
+        public static List<Products> ProductList()
+        {
+            var _context = new NorthwindContext();
+
+            var query = from Products in _context.Products
+                        orderby Products.ProductName
+                        select Products;
+
+            return query.ToList();
+        }
+
+        public static List<Products> ProductListOrderStock()
+        {
+            var _context = new NorthwindContext();
+
+            var query = from Products in _context.Products
+                        orderby Products.UnitsInStock
+                        select Products;
+
+            return query.ToList();
+        }
+
+        public static List<Products> FirstProduct()
+        {
+            var _context = new NorthwindContext();
+
+            var query = (from Products in _context.Products
+                         orderby Products.UnitsInStock
+                         select Products).Take(1);
+
+            return query.ToList();
+        }
+
+        public static List<> ProdcutsCategories()
+        {
+            var _context = new NorthwindContext();
+
+            var query = from Products in _context.Products
+                        
+                        select new {Products.Categories} 
+                        ;
+
+            return query.ToList();
+        }
+
+
+
+
+
 
         //public static List<Products> ProductNull789()
         //{
