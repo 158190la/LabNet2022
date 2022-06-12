@@ -57,5 +57,15 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\tp5.Entities\tp5.Entities.csproj">
+      <Project>{420BC29C-50CF-48A0-88AB-AD31325A35E7}</Project>
+      <Name>tp5.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\tp5.Logic\tp5.Logic.csproj">
+      <Project>{473990E2-42D6-445B-9ED5-3A0CE7673B6A}</Project>
+      <Name>tp5.Logic</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
