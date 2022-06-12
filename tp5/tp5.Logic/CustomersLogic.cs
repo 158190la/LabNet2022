@@ -32,10 +32,10 @@ namespace tp5.Logic
             var _context = new NorthwindContext();
             var query2 = (from Customers in _context.Customers
                          where Customers.Region == "WA"
-                         select Customers).Take(3)                         ;
+                         select Customers)                         ;
 
-            var query3 = _context.Customers.Where(a => a.Region == "WA");
-            return query3.ToList();
+            //var query3 = _context.Customers.Where(a => a.Region == "WA");
+            return query2.ToList();
         }
 
         public static List<Customers> MinMayus()
@@ -53,6 +53,7 @@ namespace tp5.Logic
         {
             var _context = new NorthwindContext();
             DateTime comparisonDate = new DateTime(1997, 1, 1);
+
             var query3 = from Customers in _context.Customers
                          join Orders in _context.Orders
                          on Customers.CustomerID equals Orders.CustomerID

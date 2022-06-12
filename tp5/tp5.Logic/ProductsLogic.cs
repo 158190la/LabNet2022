@@ -52,7 +52,7 @@ namespace tp5.Logic
             var _context = new NorthwindContext();
 
             var query = from Products in _context.Products
-                        orderby Products.UnitsInStock
+                        orderby Products.UnitsInStock descending
                         select Products;
 
             return query.ToList();
@@ -69,17 +69,17 @@ namespace tp5.Logic
             return query.ToList();
         }
 
-        public static List<> ProdcutsCategories()
-        {
-            var _context = new NorthwindContext();
+        //public static List<> ProdcutsCategories()
+        //{
+        //    var _context = new NorthwindContext();
 
-            var query = from Products in _context.Products
+        //    var query = from Products in _context.Products
                         
-                        select new {Products.Categories} 
-                        ;
+        //                select new {Products.Categories} 
+        //                ;
 
-            return query.ToList();
-        }
+        //    return query.ToList();
+        //}
 
 
 

@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using tp5.Logic;
+using System.Windows.Forms;
+
 
 namespace tp5.UI
 {
@@ -11,70 +13,33 @@ namespace tp5.UI
     {
         static void Main(string[] args)
         {
-                        
-            CustomersLogic customersLogic = new CustomersLogic();
-            var query = CustomersLogic.ObjetoCustomer();
+            ReadAndWrite.Exc1();
 
-            foreach (var item in query)
-            {
-                Console.WriteLine(item.ContactName);
-                Console.ReadLine();
-            }
+            ReadAndWrite.Exc2();
 
-            ProductsLogic productsLogic = new ProductsLogic();
+            ReadAndWrite.Exc3();
 
-            var query2 = ProductsLogic.UnitsInStock();
+            ReadAndWrite.Exc4();
 
-            foreach (var item in query2)
-            {
-                Console.WriteLine($" {item.ProductName} - {item.UnitsInStock}");
-            }
+            ReadAndWrite.Exc6();
 
-            Console.ReadLine();
+            ReadAndWrite.Exc7();
 
-            var query3 = ProductsLogic.UnitsInStockMore3();
+            ReadAndWrite.Exc8();
 
-            foreach (var item in query2)
-            {
-                Console.WriteLine($" {item.ProductName} - {item.UnitsInStock} - {item.UnitPrice}");
-            }
+            ReadAndWrite.Exc9();
 
-            Console.ReadLine();
+            ReadAndWrite.Exc10();
 
-            var query4 = CustomersLogic.CustomerRegion();
 
-            foreach (var item in query4)
-            {
-                Console.WriteLine($" {item.ContactName} - {item.Region} ");
-                
-            }
 
-            Console.ReadLine();
 
-            var query6 = CustomersLogic.MinMayus();
 
-            foreach (var item in query6)
-            {
-                Console.WriteLine($" {item.CompanyName.ToLower()}");
-                Console.WriteLine($" {item.CompanyName.ToUpper()}");
-
-            }
-
-            Console.ReadLine();
-
-            var query7 = CustomersLogic.CustomersOrders();
-
-            foreach (var item in query7)
-            {
-                Console.WriteLine(item.ToString());
-                
-
-            }
-
-            Console.ReadLine();
 
         }
 
-
+        
     }
+
+
 }
