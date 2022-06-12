@@ -48,11 +48,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BaseLogic.cs" />
+    <Compile Include="CostumerLogic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\tp5.Data\tp5.Data.csproj">
+      <Project>{667ED1B7-03A1-46FF-9314-5ECF71977124}</Project>
+      <Name>tp5.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\tp5.Entities\tp5.Entities.csproj">
+      <Project>{420BC29C-50CF-48A0-88AB-AD31325A35E7}</Project>
+      <Name>tp5.Entities</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
