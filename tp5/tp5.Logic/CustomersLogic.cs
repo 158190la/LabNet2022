@@ -19,11 +19,12 @@ namespace tp5.Logic
         public static List<Customers>  ObjetoCustomer()
         {
             var _context = new NorthwindContext();
-            var query2 = from Customers in _context.Customers
-                        where Customers.CustomerID == "ALFKI"
-                        select Customers;
-            
-            return query2.ToList();
+            //var query2 = from Customers in _context.Customers
+            //            where Customers.CustomerID == "ALFKI"
+            //            select Customers;
+
+            var query3 = _context.Customers.Where(a => a.CustomerID == "ALFKI");           
+            return query3.ToList();
         }
 
         public static List<Customers> CustomerRegion()
@@ -33,7 +34,8 @@ namespace tp5.Logic
                          where Customers.Region == "WA"
                          select Customers;
 
-            return query2.ToList();
+            var query3 = _context.Customers.Where(a => a.Region == "WA");
+            return query3.ToList();
         }
 
         public static List<Customers> MinMayus()
@@ -65,7 +67,7 @@ namespace tp5.Logic
                                         c.CustomerID,
                                     });
 
-            return query4.ToList();
+            return query3.ToList();
         }
 
     }
