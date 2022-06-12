@@ -13,32 +13,32 @@ namespace tp5.UI
     {
         static void Main(string[] args)
         {
-            ReadAndWrite.Exc1();
+            //ReadAndWrite.Exc1();
 
-            ReadAndWrite.Exc2();
+            //ReadAndWrite.Exc2();
 
-            ReadAndWrite.Exc3();
+            //ReadAndWrite.Exc3();
 
-            ReadAndWrite.Exc4();
+            //ReadAndWrite.Exc4();
 
-            ReadAndWrite.Exc6();
+            //ReadAndWrite.Exc6();
 
             ReadAndWrite.Exc7();
 
-            ReadAndWrite.Exc8();
+            //ReadAndWrite.Exc8();
 
-            ReadAndWrite.Exc9();
+            //ReadAndWrite.Exc9();
 
-            ReadAndWrite.Exc10();
+            //ReadAndWrite.Exc10();
 
+            ReadAndWrite.Exc11();
 
-
-
+            ReadAndWrite.Exc12();
 
 
         }
 
-        
+
     }
 
 

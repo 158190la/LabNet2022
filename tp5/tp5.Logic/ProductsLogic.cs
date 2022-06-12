@@ -69,17 +69,7 @@ namespace tp5.Logic
             return query.ToList();
         }
 
-        //public static List<> ProdcutsCategories()
-        //{
-        //    var _context = new NorthwindContext();
-
-        //    var query = from Products in _context.Products
-                        
-        //                select new {Products.Categories} 
-        //                ;
-
-        //    return query.ToList();
-        //}
+        
 
 
 

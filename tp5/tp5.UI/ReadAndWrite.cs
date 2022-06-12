@@ -17,7 +17,7 @@ namespace tp5.UI
             foreach (var item in query)
             {
                 Console.WriteLine(item.ContactName);
-                
+
             }
             Console.ReadLine();
         }
@@ -43,7 +43,7 @@ namespace tp5.UI
             {
                 Console.WriteLine($" {item.ProductName} - {item.UnitsInStock} - {item.UnitPrice}");
             }
-                        
+
             Console.ReadLine();
         }
         public static void Exc4()
@@ -80,7 +80,7 @@ namespace tp5.UI
 
             foreach (var item in query7)
             {
-                Console.WriteLine($" {item.ContactName} - {item.Region}");
+                Console.WriteLine($" {item.CompanyName} - {item.Region}");
             }
 
             Console.ReadLine();
@@ -115,18 +115,38 @@ namespace tp5.UI
 
         public static void Exc10()
         {
-            var query9 = ProductsLogic.ProductListOrderStock();
+            var query10 = ProductsLogic.ProductListOrderStock();
 
-            foreach (var item in query9)
+            foreach (var item in query10)
             {
                 Console.WriteLine($" {item.ProductName} - {item.UnitsInStock}");
             }
 
             Console.ReadLine();
-
         }
 
+        public static void Exc11()
+        {
+            var query11 = CategoriesLogic.CatProdcuts();
 
+            foreach (var item in query11)
+            {
+                Console.WriteLine($" {item.CategoryID} - {item.CategoryName}");
+            }
 
-    }
+            Console.ReadLine();
+
+        }
+        public static void Exc12()
+        {
+            var query12 = ProductsLogic.FirstProduct();
+
+            foreach (var item in query12)
+            {
+                Console.WriteLine($" {item.ProductName}");
+            }
+
+            Console.ReadLine();
+        }
+    }        
 }
