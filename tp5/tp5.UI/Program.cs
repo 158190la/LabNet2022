@@ -13,47 +13,48 @@ namespace tp5.UI
     {
         static void Main(string[] args)
         {  var i = 1;
-            Console.Write($"Ejercicio - {i++}");
-            Console.WriteLine();
+
+            Console.WriteLine($"Ejercicio - {i++}");
+            
             ReadAndWrite.Exc1();
-            Console.Write($"Ejercicio - {i++}");
-            Console.WriteLine();
+            Console.WriteLine($"Ejercicio - {i++}");
+            
             ReadAndWrite.Exc2();
-            Console.Write($"Ejercicio - {i++}");
-            Console.WriteLine();
+            Console.WriteLine($"Ejercicio - {i++}");
+            
             ReadAndWrite.Exc3();
-            Console.Write($"Ejercicio - {i++}");
-            Console.WriteLine();
+            Console.WriteLine($"Ejercicio - {i++}");
+            
             ReadAndWrite.Exc4();
-            Console.Write($"Ejercicio - {i++}");
-            Console.WriteLine();
+            Console.WriteLine($"Ejercicio - {i++}");
+            
             ReadAndWrite.Exc5();
-            Console.Write($"Ejercicio - {i++}");
-            Console.WriteLine();
+            Console.WriteLine($"Ejercicio - {i++}");
+            
             ReadAndWrite.Exc6();
-            Console.Write($"Ejercicio - {i++}");
-            Console.WriteLine();
+            Console.WriteLine($"Ejercicio - {i++}");
+            
             ReadAndWrite.Exc7();
-            Console.Write($"Ejercicio - {i++}");
-            Console.WriteLine();
+            Console.WriteLine($"Ejercicio - {i++}");
+            
             ReadAndWrite.Exc8();
-            Console.Write($"Ejercicio - {i++}");
-            Console.WriteLine();
+            Console.WriteLine($"Ejercicio - {i++}");
+            
             ReadAndWrite.Exc9();
-            Console.Write($"Ejercicio - {i++}");
-            Console.WriteLine();
+            Console.WriteLine($"Ejercicio - {i++}");
+            
             ReadAndWrite.Exc10();
-            Console.Write($"Ejercicio - {i++}");
-            Console.WriteLine();
+            Console.WriteLine($"Ejercicio - {i++}");
+            
             ReadAndWrite.Exc11();
-            Console.Write($"Ejercicio - {i++}");
-            Console.WriteLine();
+            Console.WriteLine($"Ejercicio - {i++}");
+            
             ReadAndWrite.Exc12();
-            Console.Write($"Ejercicio - {i++}");
-            Console.WriteLine();
+            Console.WriteLine($"Ejercicio - {i++}");
+            
             ReadAndWrite.Exc13();
 
-
+            
         }
 
 
