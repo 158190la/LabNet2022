@@ -12,29 +12,45 @@ namespace tp5.UI
     internal class Program
     {
         static void Main(string[] args)
-        {
-            //ReadAndWrite.Exc1();
-
-            //ReadAndWrite.Exc2();
-
-            //ReadAndWrite.Exc3();
-
-            //ReadAndWrite.Exc4();
-
-            //ReadAndWrite.Exc6();
-
-            //ReadAndWrite.Exc7();
-
-            //ReadAndWrite.Exc8();
-
-            //ReadAndWrite.Exc9();
-
-            //ReadAndWrite.Exc10();
-
-            //ReadAndWrite.Exc11();
-
-            //ReadAndWrite.Exc12();
-
+        {  var i = 1;
+            Console.Write($"Ejercicio - {i++}");
+            Console.WriteLine();
+            ReadAndWrite.Exc1();
+            Console.Write($"Ejercicio - {i++}");
+            Console.WriteLine();
+            ReadAndWrite.Exc2();
+            Console.Write($"Ejercicio - {i++}");
+            Console.WriteLine();
+            ReadAndWrite.Exc3();
+            Console.Write($"Ejercicio - {i++}");
+            Console.WriteLine();
+            ReadAndWrite.Exc4();
+            Console.Write($"Ejercicio - {i++}");
+            Console.WriteLine();
+            ReadAndWrite.Exc5();
+            Console.Write($"Ejercicio - {i++}");
+            Console.WriteLine();
+            ReadAndWrite.Exc6();
+            Console.Write($"Ejercicio - {i++}");
+            Console.WriteLine();
+            ReadAndWrite.Exc7();
+            Console.Write($"Ejercicio - {i++}");
+            Console.WriteLine();
+            ReadAndWrite.Exc8();
+            Console.Write($"Ejercicio - {i++}");
+            Console.WriteLine();
+            ReadAndWrite.Exc9();
+            Console.Write($"Ejercicio - {i++}");
+            Console.WriteLine();
+            ReadAndWrite.Exc10();
+            Console.Write($"Ejercicio - {i++}");
+            Console.WriteLine();
+            ReadAndWrite.Exc11();
+            Console.Write($"Ejercicio - {i++}");
+            Console.WriteLine();
+            ReadAndWrite.Exc12();
+            Console.Write($"Ejercicio - {i++}");
+            Console.WriteLine();
             ReadAndWrite.Exc13();
 
 

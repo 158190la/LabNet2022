@@ -11,8 +11,9 @@ namespace tp5.UI
 {
     internal class ReadAndWrite
     {
+        
         public static void Exc1()
-        {
+        {   
             CustomersLogic customersLogic = new CustomersLogic();
             var query = CustomersLogic.ObjetoCustomer();
 
@@ -67,7 +68,17 @@ namespace tp5.UI
 
         }
 
-        // Falta el 5 no entendi la consigna
+        public static void Exc5()
+        {
+            var query5 = ProductsLogic.FirstProductor789();
+
+            
+            Console.WriteLine($"{query5}");
+
+            Console.ReadLine();
+            Console.Clear();
+
+        }
 
         public static void Exc6()
         {
@@ -177,7 +188,7 @@ namespace tp5.UI
 
             foreach (var item in query13)
             {
-                Console.WriteLine($" {item.CompanyName} - {item.Count}");
+                Console.WriteLine($"{item.CustomerID} - {item.Count}");
             }
 
             Console.ReadLine();

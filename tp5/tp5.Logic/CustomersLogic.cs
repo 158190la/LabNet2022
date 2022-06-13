@@ -24,28 +24,28 @@ namespace tp5.Logic
             //            where Customers.CustomerID == "ALFKI"
             //            select Customers;
 
-            var query3 = _context.Customers.Where(a => a.CustomerID == "ALFKI");           
-            return query3.ToList();
+            var query = _context.Customers.Where(a => a.CustomerID == "ALFKI");           
+            return query.ToList();
         }
 
         public static List<Customers> CustomerRegion()
         {
             var _context = new NorthwindContext();
-            var query2 = (from Customers in _context.Customers
+            var query = (from Customers in _context.Customers
                          where Customers.Region == "WA"
                          select Customers)                         ;
 
             //var query3 = _context.Customers.Where(a => a.Region == "WA");
-            return query2.ToList();
+            return query.ToList();
         }
 
         public static List<Customers> MinMayus()
         {
             var _context = new NorthwindContext();
-            var query3 = from Customers in _context.Customers
+            var query = from Customers in _context.Customers
                          select Customers;
 
-            return query3.ToList();
+            return query.ToList();
         }
         //7. Query para devolver Join entre Customers y Orders donde los customers sean de la 
         // Región WA y la fecha de orden sea mayor a 1/1/1997.
@@ -61,14 +61,7 @@ namespace tp5.Logic
                          where Orders.OrderDate > comparisonDate && Customers.Region == "WA"
                          select new CustomerOrders { CustomerID = Customers.CustomerID, OrderDate = Orders.OrderDate, Region = Customers.Region } ;
 
-            //var query4 = _context.Customers.Join(_context.Orders
-            //                        , c => c.CustomerID
-            //                        , m => m.CustomerID
-            //                        , (c, m) => new
-            //                        {
-            //                            c.CustomerID,
-            //                        });
-            
+                       
             return query3.ToList();
         }
         public static List<CustomerOrders> CustomerOrdersAsociated()
@@ -80,7 +73,7 @@ namespace tp5.Logic
                           join Orders in _context.Orders
                           on Customers.CustomerID equals Orders.CustomerID
                           group Customers by Customers.CustomerID into CustomersOrdersCount
-                          select new CustomerOrders { Count = CustomersOrdersCount.Count() };
+                          select new CustomerOrders { Count = CustomersOrdersCount.Count(), CustomerID = CustomersOrdersCount.Key };
                           
                           
 
@@ -94,20 +87,15 @@ namespace tp5.Logic
                           where Customers.Region == "WA"
                           select Customers).Take(3);
 
+            var query22 = _context.Customers
+                                    .Where(r => r.Region == "WA")
+                                    .Take(3);
             
-            return query2.ToList();
+            return query22.ToList();
         }
         
 
     }
 
 }
-//        public static void Show()
-//        {
-//            ShippersLogic shipperlogic = new ShippersLogic();
-//            Console.WriteLine("ID - Company Name - Phone");
-//            foreach (Shippers shippers in shipperlogic.GetAll())
-//            {
-//                Console.WriteLine($"{shippers.ShipperID} -{shippers.CompanyName} - {shippers.Phone}");
-//            }
-//
+

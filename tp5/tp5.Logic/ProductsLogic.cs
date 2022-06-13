@@ -22,6 +22,9 @@ namespace tp5.Logic
                         where Products.UnitsInStock > 0
                         select Products;
 
+            var query2 = _context.Products
+                                     .Where(p => p.UnitsInStock > 0);
+
             return query.ToList();
         }
 
@@ -44,6 +47,9 @@ namespace tp5.Logic
                         orderby Products.ProductName
                         select Products;
 
+            var query2 = _context.Products
+                                    .OrderBy(r => r.ProductName);
+
             return query.ToList();
         }
 
@@ -55,6 +61,8 @@ namespace tp5.Logic
                         orderby Products.UnitsInStock descending
                         select Products;
 
+            var query2 = _context.Products
+                                    .OrderByDescending(x => x.UnitsInStock);
             return query.ToList();
         }
 
@@ -66,26 +74,24 @@ namespace tp5.Logic
                          orderby Products.UnitsInStock
                          select Products).Take(1);
 
-            return query.ToList();
+            var query2 = _context.Products
+                                    .OrderBy(r => r.UnitsInStock)
+                                    .Take(1);
+
+            return query2.ToList();
         }
 
-        
 
 
+        public static Products FirstProductor789()
+        {
+            var _context = new NorthwindContext();
+            var query = _context.Products
+                                    .FirstOrDefault(p => p.ProductID == 789);
 
+            return query;
 
-
-
-        //public static List<Products> ProductNull789()
-        //{
-        //    var _context = new NorthwindContext();
-
-        //    var query = from Products in _context.Products
-        //                where Products.ProductID == 789 && Products
-        //                select Products;
-
-        //    return query.ToList();
-        //}
+        }
 
 
     }
