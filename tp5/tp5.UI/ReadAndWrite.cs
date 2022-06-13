@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using tp5.Logic;
+using tp5.Entities;
+using System.Linq.Expressions;
 
 namespace tp5.UI
 {
@@ -20,6 +22,8 @@ namespace tp5.UI
 
             }
             Console.ReadLine();
+            Console.Clear();
+
         }
 
         public static void Exc2()
@@ -33,6 +37,8 @@ namespace tp5.UI
                 Console.WriteLine($" {item.ProductName} - {item.UnitsInStock}");
             }
             Console.ReadLine();
+            Console.Clear();
+
         }
 
         public static void Exc3()
@@ -45,6 +51,7 @@ namespace tp5.UI
             }
 
             Console.ReadLine();
+            Console.Clear();
         }
         public static void Exc4()
         {
@@ -56,6 +63,8 @@ namespace tp5.UI
             }
 
             Console.ReadLine();
+            Console.Clear();
+
         }
 
         // Falta el 5 no entendi la consigna
@@ -71,19 +80,24 @@ namespace tp5.UI
             }
 
             Console.ReadLine();
+            Console.Clear();
+
 
         }
 
         public static void Exc7()
         {
-            var query7 = CustomersLogic.CustomersOrders();
+            var query7 =CustomersLogic.GetCustomersOrders();
 
-            foreach (var item in query7)
+
+            foreach (CustomerOrders item in query7)
             {
-                Console.WriteLine($" {item.CompanyName} - {item.Region}");
+                Console.WriteLine($"{item.CustomerID} - {item.OrderDate} - {item.Region}");   
             }
-
+            
             Console.ReadLine();
+            Console.Clear();
+
 
         }
 
@@ -97,6 +111,7 @@ namespace tp5.UI
             }
 
             Console.ReadLine();
+            Console.Clear();
 
         }
 
@@ -110,6 +125,7 @@ namespace tp5.UI
             }
 
             Console.ReadLine();
+            Console.Clear();
 
         }
 
@@ -123,6 +139,8 @@ namespace tp5.UI
             }
 
             Console.ReadLine();
+            Console.Clear();
+
         }
 
         public static void Exc11()
@@ -135,6 +153,8 @@ namespace tp5.UI
             }
 
             Console.ReadLine();
+            Console.Clear();
+
 
         }
         public static void Exc12()
@@ -147,6 +167,22 @@ namespace tp5.UI
             }
 
             Console.ReadLine();
+            Console.Clear();
+
+        }
+
+        public static void Exc13()
+        {
+            var query13 = CustomersLogic.CustomerOrdersAsociated();
+
+            foreach (var item in query13)
+            {
+                Console.WriteLine($" {item.CompanyName} - {item.Count}");
+            }
+
+            Console.ReadLine();
+            Console.Clear();
+
         }
     }        
 }

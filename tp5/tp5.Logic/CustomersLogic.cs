@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Linq.Expressions;
 using tp5.Entities;
 using tp5.Data;
+using System.Collections;
 
 namespace tp5.Logic
 {
@@ -49,7 +50,7 @@ namespace tp5.Logic
         //7. Query para devolver Join entre Customers y Orders donde los customers sean de la 
         // Región WA y la fecha de orden sea mayor a 1/1/1997.
 
-        public static List<Customers> CustomersOrders()
+        public static List<CustomerOrders> GetCustomersOrders()
         {
             var _context = new NorthwindContext();
             DateTime comparisonDate = new DateTime(1997, 1, 1);
@@ -58,17 +59,33 @@ namespace tp5.Logic
                          join Orders in _context.Orders
                          on Customers.CustomerID equals Orders.CustomerID
                          where Orders.OrderDate > comparisonDate && Customers.Region == "WA"
-                         select Customers;
+                         select new CustomerOrders { CustomerID = Customers.CustomerID, OrderDate = Orders.OrderDate, Region = Customers.Region } ;
 
-            var query4 = _context.Customers.Join(_context.Orders
-                                    , c => c.CustomerID
-                                    , m => m.CustomerID
-                                    , (c, m) => new
-                                    {
-                                        c.CustomerID,
-                                    });
-
+            //var query4 = _context.Customers.Join(_context.Orders
+            //                        , c => c.CustomerID
+            //                        , m => m.CustomerID
+            //                        , (c, m) => new
+            //                        {
+            //                            c.CustomerID,
+            //                        });
+            
             return query3.ToList();
+        }
+        public static List<CustomerOrders> CustomerOrdersAsociated()
+        {
+            var _context = new NorthwindContext();
+
+
+            var query13 = from Customers in _context.Customers
+                          join Orders in _context.Orders
+                          on Customers.CustomerID equals Orders.CustomerID
+                          group Customers by Customers.CustomerID into CustomersOrdersCount
+                          select new CustomerOrders { Count = CustomersOrdersCount.Count() };
+                          
+                          
+
+
+            return query13.ToList();
         }
         public static List<Customers> CustomerRegionTop3()
         {
@@ -80,7 +97,7 @@ namespace tp5.Logic
             
             return query2.ToList();
         }
-
+        
 
     }
 

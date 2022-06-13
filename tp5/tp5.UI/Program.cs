@@ -23,7 +23,7 @@ namespace tp5.UI
 
             //ReadAndWrite.Exc6();
 
-            ReadAndWrite.Exc7();
+            //ReadAndWrite.Exc7();
 
             //ReadAndWrite.Exc8();
 
@@ -31,9 +31,11 @@ namespace tp5.UI
 
             //ReadAndWrite.Exc10();
 
-            ReadAndWrite.Exc11();
+            //ReadAndWrite.Exc11();
 
-            ReadAndWrite.Exc12();
+            //ReadAndWrite.Exc12();
+
+            ReadAndWrite.Exc13();
 
 
         }
