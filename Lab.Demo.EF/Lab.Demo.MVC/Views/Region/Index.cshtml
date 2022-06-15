@@ -1,0 +1,30 @@
+﻿@Model List<Lab.Demo.MVC.Models.RegionView>
+    
+@{ ViewBag.Title = "Region Page"; }
+<h1>Hola soy el Index de Region</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Descripcion</th>
+          
+        </tr>
+    </thead>
+       
+    <tbody>
+        @foreach (var region in Model)
+        {
+
+            <tr>
+                <th scope="row">@region.Id</th>
+                <th>@region.Descripcion</th>
+                
+            </tr>
+        }
+    </tbody>
+       
+ </table>   
+    <div>
+        @Html.ActionLink("Insertar Nueva Region","Insert")
+    </div>
