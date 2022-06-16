@@ -46,6 +46,10 @@ namespace TP3.EF.MVC.Controllers
         [HttpPost]
         public ActionResult Create(ShippersView shippersViews)
         {
+            if (ModelState.IsValid)
+            {
+                return View(shippersViews);
+            }
             try
             {
                 Shippers shipperEntity = new Shippers { CompanyName = shippersViews.CompanyName, Phone = shippersViews.Phone};
@@ -63,26 +67,37 @@ namespace TP3.EF.MVC.Controllers
         // GET: Shippers/Edit/5
         public ActionResult Edit(int id) 
         {
-            return View();
+            ShippersView model = new ShippersView();
+            
+            
+            model.ShipperID = id;
+
+
+            return View(model);
         }
 
         // POST: Shippers/Edit/5
         [HttpPost]
         public ActionResult Edit(ShippersView shippersViews)
         {
+            if (ModelState.IsValid)
+            {
+                return View(shippersViews);
+            }
             try
             {
-                Shippers shipperUpdate = new Shippers { ShipperID = shippersViews.ShipperID };
+                Shippers shipperUpdate = new Shippers();
                 
                 shipperUpdate.CompanyName = shippersViews.CompanyName;
                 shipperUpdate.Phone = shippersViews.Phone;
-                shippersViews.ShipperID = shipperUpdate.ShipperID;
+                shipperUpdate.ShipperID = shippersViews.ShipperID;
                 logic.Update(shipperUpdate);
 
                 return RedirectToAction("Index");
             }
-            catch (Exception ex)
+            catch (Exception)
             {
+                
                 return View();
             }
         }

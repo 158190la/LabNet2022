@@ -34,7 +34,7 @@ namespace TP3.EF.Logic
         public void Update(Shippers shippers)
         {
             
-            var shipperUpdate = context.Shippers.Find(shippers.ShipperID);
+            Shippers shipperUpdate = context.Shippers.Find(shippers.ShipperID);
 
             shipperUpdate.CompanyName = shippers.CompanyName;
             shipperUpdate.Phone=shippers.Phone;
