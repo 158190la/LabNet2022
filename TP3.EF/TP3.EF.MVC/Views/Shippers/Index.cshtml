@@ -1,0 +1,40 @@
+﻿@model List<TP3.EF.MVC.Models.ShippersView>
+
+@{
+    ViewBag.Title = "View1";
+}
+
+<h2>View1</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Company Name</th>
+        <th scope="col">Phone</th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ShipperID)
+            
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CompanyName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Phone)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.ShipperID }) |
+            @Html.ActionLink("Details", "Details", new { id = item.ShipperID }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.ShipperID }, new { onlick = "return confirm('Esta seguro de borrar este Shipper?')"})
+        </td>
+    </tr>
+}
+
+</table>
