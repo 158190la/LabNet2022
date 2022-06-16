@@ -61,7 +61,7 @@ namespace TP3.EF.MVC.Controllers
         }
 
         // GET: Shippers/Edit/5
-        public ActionResult Edit(int id)
+        public ActionResult Edit(int id) 
         {
             return View();
         }
@@ -76,11 +76,12 @@ namespace TP3.EF.MVC.Controllers
                 
                 shipperUpdate.CompanyName = shippersViews.CompanyName;
                 shipperUpdate.Phone = shippersViews.Phone;
-                
+                shippersViews.ShipperID = shipperUpdate.ShipperID;
+                logic.Update(shipperUpdate);
 
                 return RedirectToAction("Index");
             }
-            catch
+            catch (Exception ex)
             {
                 return View();
             }
