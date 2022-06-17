@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FluentValidation.Results;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -46,22 +47,25 @@ namespace TP3.EF.MVC.Controllers
         [HttpPost]
         public ActionResult Create(ShippersView shippersViews)
         {
-            if (ModelState.IsValid)
+            ShippersValidator shippersvalidator = new ShippersValidator();
+            ValidationResult result = shippersvalidator.Validate(shippersViews);
+
+            if (result.IsValid)
             {
-                return View(shippersViews);
-            }
-            try
-            {
-                Shippers shipperEntity = new Shippers { CompanyName = shippersViews.CompanyName, Phone = shippersViews.Phone};
+                Shippers shipperEntity = new Shippers { CompanyName = shippersViews.CompanyName, Phone = shippersViews.Phone };
 
                 logic.Add(shipperEntity);
-              
+
                 return RedirectToAction("Index");
             }
-            catch (Exception ex)
+            else
             {
-                return RedirectToAction("Index","Error");
+                foreach (var failure in result.Errors)
+                {
+                    ModelState.AddModelError(failure.PropertyName, failure.ErrorMessage);
+                }
             }
+            return View(shippersViews);
         }
 
         // GET: Shippers/Edit/5
@@ -80,26 +84,29 @@ namespace TP3.EF.MVC.Controllers
         [HttpPost]
         public ActionResult Edit(ShippersView shippersViews)
         {
-            if (ModelState.IsValid)
+           ShippersValidator shippersvalidator = new ShippersValidator();
+           ValidationResult result = shippersvalidator.Validate(shippersViews);
+            Shippers shipperUpdate = new Shippers();
+
+            if (result.IsValid)
             {
-                return View(shippersViews);
-            }
-            try
-            {
-                Shippers shipperUpdate = new Shippers();
-                
                 shipperUpdate.CompanyName = shippersViews.CompanyName;
                 shipperUpdate.Phone = shippersViews.Phone;
                 shipperUpdate.ShipperID = shippersViews.ShipperID;
                 logic.Update(shipperUpdate);
-
                 return RedirectToAction("Index");
             }
-            catch (Exception)
+            else
             {
+                foreach (var failure in result.Errors)
+                {
+                    ModelState.AddModelError(failure.PropertyName, failure.ErrorMessage);
+                }
                 
-                return View();
             }
+            return View(shippersViews);
+
+
         }
 
         // GET: Shippers/Delete/5
