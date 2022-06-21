@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TP3.EF.Entities", "TP3.EF.E
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TP3.EF.MVC", "TP3.EF.MVC\TP3.EF.MVC.csproj", "{A964CF7C-7DD4-4B2D-B94A-CFA1464AFE64}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TP3.EF.TP8.APIRQ", "TP3.EF.TP8.APIRQ\TP3.EF.TP8.APIRQ.csproj", "{6847BB2E-1A5B-415B-9734-F509F0E1A38F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{A964CF7C-7DD4-4B2D-B94A-CFA1464AFE64}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A964CF7C-7DD4-4B2D-B94A-CFA1464AFE64}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A964CF7C-7DD4-4B2D-B94A-CFA1464AFE64}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6847BB2E-1A5B-415B-9734-F509F0E1A38F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6847BB2E-1A5B-415B-9734-F509F0E1A38F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6847BB2E-1A5B-415B-9734-F509F0E1A38F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6847BB2E-1A5B-415B-9734-F509F0E1A38F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
