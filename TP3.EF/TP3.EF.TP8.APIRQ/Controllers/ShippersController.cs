@@ -72,7 +72,7 @@ namespace TP3.EF.TP8.APIRQ.Controllers
                     {
                         ModelState.AddModelError(failure.PropertyName, failure.ErrorMessage);
                     }
-                    
+                    return Content(HttpStatusCode.NotFound,ModelState);
                 }
                 return Ok(shippersViews);
             }
@@ -96,11 +96,22 @@ namespace TP3.EF.TP8.APIRQ.Controllers
 
                 if (result.IsValid)
                 {
-                    shipperUpdate.CompanyName = shippersViews.CompanyName;
-                    shipperUpdate.Phone = shippersViews.Phone;
-                    shipperUpdate.ShipperID = shippersViews.ShipperID;
-                    logic.Update(shipperUpdate);
+                    bool shipperExists = logic.GetAll().Exists(s => s.ShipperID == shippersViews.ShipperID);
 
+                    if (shipperExists)
+                    {
+                        shipperUpdate.CompanyName = shippersViews.CompanyName;
+                        shipperUpdate.Phone = shippersViews.Phone;
+                        shipperUpdate.ShipperID = shippersViews.ShipperID;
+                        logic.Update(shipperUpdate);
+                        return Ok(shippersViews);
+
+                    }
+                    else
+                    {
+                        return Content(HttpStatusCode.NotFound, ModelState);
+
+                    }
                 }
                 else
                 {
@@ -108,18 +119,15 @@ namespace TP3.EF.TP8.APIRQ.Controllers
                     {
                         ModelState.AddModelError(failure.PropertyName, failure.ErrorMessage);
                     }
+                    return Content(HttpStatusCode.NotFound, ModelState);
+                }               
 
-                }
-                return Ok(shippersViews);
             }
             catch (Exception e)
             {
-
                 return Content(HttpStatusCode.NotFound, e.Message);
             }
             
-
-
         }
 
         [HttpDelete]
