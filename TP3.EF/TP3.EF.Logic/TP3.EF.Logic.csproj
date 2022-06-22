@@ -55,6 +55,7 @@
     <Compile Include="CateogriesLogic.cs" />
     <Compile Include="IABMLogic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositorio\IRepositorioShippers.cs" />
     <Compile Include="ShippersLogic.cs" />
   </ItemGroup>
   <ItemGroup>

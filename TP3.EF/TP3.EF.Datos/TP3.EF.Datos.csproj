@@ -55,6 +55,7 @@
   <ItemGroup>
     <Compile Include="NortwhindContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositorio\IRepositorioShippers.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

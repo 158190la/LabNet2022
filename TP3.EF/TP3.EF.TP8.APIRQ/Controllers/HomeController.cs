@@ -17,5 +17,13 @@ namespace TP3.EF.TP8.APIRQ.Controllers
 
             return View();
         }
+
+        public ActionResult NasaRQ()
+        {
+
+            ViewBag.Title = "Home Page";
+
+            return View();
+        }
     }
 }
