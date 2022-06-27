@@ -15,9 +15,12 @@ using HttpGetAttribute = System.Web.Http.HttpGetAttribute;
 using HttpPutAttribute = System.Web.Http.HttpPutAttribute;
 using HttpDeleteAttribute = System.Web.Http.HttpDeleteAttribute;
 using HttpPostAttribute = System.Web.Http.HttpPostAttribute;
+using System.Web.Http.Cors;
 
 namespace TP3.EF.TP8.APIRQ.Controllers
 {
+    
+
     public class ShippersController : ApiController
     {
         ShippersLogic logic = new ShippersLogic();

@@ -7,9 +7,13 @@ using System.Web.Mvc;
 
 namespace TP3.EF.TP8.APIRQ.Controllers
 {
-    [EnableCors(origins:"*",headers:"*",methods:"*")]
+    [EnableCors(origins: "*", headers: "", methods: "*")]
+    
+  
+    
     public class HomeController : Controller
     {
+
         public ActionResult Index()
         {
 
