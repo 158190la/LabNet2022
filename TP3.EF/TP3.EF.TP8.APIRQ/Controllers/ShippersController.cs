@@ -19,7 +19,7 @@ using System.Web.Http.Cors;
 
 namespace TP3.EF.TP8.APIRQ.Controllers
 {
-    
+    [EnableCors(origins: "http://localhost:4200", headers: "*", methods: "*")]
 
     public class ShippersController : ApiController
     {

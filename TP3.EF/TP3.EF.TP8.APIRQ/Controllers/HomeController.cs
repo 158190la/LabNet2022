@@ -7,7 +7,7 @@ using System.Web.Mvc;
 
 namespace TP3.EF.TP8.APIRQ.Controllers
 {
-    [EnableCors(origins: "*", headers: "", methods: "*")]
+   
     
   
     
