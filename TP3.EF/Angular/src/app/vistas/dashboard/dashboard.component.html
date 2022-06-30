@@ -1,0 +1,76 @@
+<div class="blockquote text-center">
+<div><h1 class="display-2">ABM SHIPPERS</h1></div>
+<div>
+  <form [formGroup]="formulario" (ngSubmit)="CreateShipper(this.formulario.get('CompanyName')?.value,this.formulario.get('Phone')?.value)">
+    <th scope="row"><button class="btn btn-primary" (click)="formvisibility=false" [hidden]="!formvisibility">Crear Nuevo</button></th>
+    <div [hidden]="formvisibility" class="p-3 border bg-light">
+      <div class="container">
+        <div class="row g-2">
+          <div class="col-6">
+            <div class="p-3 border bg-light">
+              <h3>Añadir Nuevo Shipper</h3>
+              Nombre: <input type="text"  name="CompanyName" formControlName="CompanyName"/><br>
+              <div *ngIf="formulario.get('CompanyName')?.invalid && (formulario.get('CompanyName')?.dirty)" class="alert alert-danger"> El Nombre ingresado no es correcto </div>
+              Telefono: <input type="text"  name="Phone" formControlName="Phone"/><br><br>
+              <div *ngIf="formulario.get('Phone')?.invalid && (formulario.get('Phone')?.dirty)" class="alert alert-danger"> El Telefono ingresado no es correcto </div>&nbsp;
+              <button class="btn btn-success" type="submit" (click)="formvisibility=true" [disabled]="this.formulario.invalid">Añadir</button>&nbsp;
+              <button class="btn btn-primary" (click)="formvisibility=true">Cancelar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </form>
+
+</div>
+<table class="table table-hover table .thead-dark">
+  <thead>
+    <tr>
+      <th scope="col">ShipperID</th>
+      <th scope="col">CompanyName</th>
+      <th scope="col">Phone</th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let shippers of shippers" >
+      <th scope="row">{{shippers.ShipperID}}</th>
+      <td>{{shippers.CompanyName}}</td>
+      <td>{{shippers.Phone}}</td>
+      <td><button class="btn btn-primary"  (click)="ShipperID=this.shippers.ShipperID" (click)="editarvisibility=false"[hidden]="!editarvisibility">Editar</button>
+        <form  [formGroup]="formularioUpdate" (ngSubmit)="editar(this.shippers.ShipperID,this.formularioUpdate.get('CompanyNameUpdate')?.value,this.formularioUpdate.get('PhoneUpdate')?.value)">
+          <div *ngIf="shippers.ShipperID == ShipperID " [hidden]="editarvisibility" class="w-auto p-3">
+            <div>
+              <th class="col">
+            Nombre: <input type="text" name="CompanyName"  formControlName="CompanyNameUpdate" value="{{shippers.CompanyName}}" />&nbsp;
+            <a *ngIf="formularioUpdate.get('CompanyNameUpdate')?.invalid && (formularioUpdate.get('CompanyNameUpdate')?.dirty)" class="alert alert-danger" class="fs-6"> El Nombre ingresado no es correcto </a>
+              </th>
+          </div>
+          <div>
+            <th class="col">
+            Telefono: <input type="text" name="Phone"  formControlName="PhoneUpdate" value="{{shippers.Phone}}" />&nbsp;
+
+            <a *ngIf="formularioUpdate.get('PhoneUpdate')?.invalid && (formularioUpdate.get('PhoneUpdate')?.dirty)" class="alert alert-danger" class="fs-6" > El Telefono ingresado no es correcto </a>
+            </th>
+            <div>
+              <th class="col">
+            <button class="btn btn-success" type="submit" (click)="editarvisibility=true" [disabled]="this.formularioUpdate.invalid" >Guardar</button>&nbsp;
+            <button class="btn btn-primary" (click)="editarvisibility=true" >Cancelar</button>
+            </th>
+          </div>
+          </div>
+        </div>
+        </form>
+
+      </td>
+      <td><button class="btn btn-primary" (click)="eliminar(shippers.ShipperID)" [hidden]="!editarvisibility" >Eliminar</button></td>
+
+    </tr>
+
+  </tbody>
+</table>
+<div class="container ">
+
+
